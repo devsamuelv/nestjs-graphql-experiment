@@ -8,6 +8,18 @@ type Author {
   lastName: String
 }
 
+type Mutation {
+  """Mutates author object based on the id input."""
+  getAuthor(
+    """The author id."""
+    id: Int!
+  ): Author!
+}
+
 type Query {
-  author(id: Int!): Author!
+  """Creates a new author object based on the id input."""
+  getAuthor(
+    """The author id."""
+    id: Int!
+  ): Author!
 }
